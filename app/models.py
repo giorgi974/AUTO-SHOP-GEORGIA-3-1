@@ -14,7 +14,6 @@ class User(db.Model, UserMixin):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
-
 class Car(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     image_url = db.Column(db.String(300), nullable=False)
