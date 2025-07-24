@@ -16,7 +16,6 @@ def create_app():
     login_manager.login_view = 'auth.login'
 
     from app.models import User, Car
-
     from app.auth import auth as auth_bp
     from app.main import main as main_bp
     app.register_blueprint(auth_bp)
