@@ -13,9 +13,8 @@ def create_app():
     db.init_app(app)
     login_manager.init_app(app)
 
-    from app.models import User  # აუცილებელია იმპორტი აქ
+    from app.models import User 
 
-    # რაუტების რეგისტრაცია
     from app.routes import main
     from app.auth import auth
     app.register_blueprint(main)
