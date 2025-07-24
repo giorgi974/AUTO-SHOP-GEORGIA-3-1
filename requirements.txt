@@ -1,7 +1,6 @@
 Flask
 Flask-SQLAlchemy
-Flask-WTF
 Flask-Login
-Flask-register
-Werkzeug
+Flask-WTF
+email-validator
 gunicorn
