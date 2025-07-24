@@ -1,22 +1,25 @@
-
 {% extends 'base.html' %}
-{% block title %}Add Car{% endblock %}
+
 {% block content %}
-<h2>Add New Car</h2>
+<h2>მანქანის დამატება</h2>
 <form method="POST">
     {{ form.hidden_tag() }}
+
     <div class="mb-3">
-        {{ form.image_url.label(class="form-label") }}
+        {{ form.image_url.label }}
         {{ form.image_url(class="form-control") }}
     </div>
+
     <div class="mb-3">
-        {{ form.description.label(class="form-label") }}
+        {{ form.description.label }}
         {{ form.description(class="form-control") }}
     </div>
+
     <div class="mb-3">
-        {{ form.price.label(class="form-label") }}
+        {{ form.price.label }}
         {{ form.price(class="form-control") }}
     </div>
-    {{ form.submit(class="btn btn-primary") }}
+
+    <button type="submit" class="btn btn-primary">{{ form.submit.label.text }}</button>
 </form>
 {% endblock %}
